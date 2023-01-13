@@ -6,7 +6,7 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:29:21 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/13 15:19:39 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:34:00 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ int				ft_toupper(int c);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 char			*ft_strjoin(char const *s1, char const *s2);
+
+char			*ft_strtrim(char const *s1, char const *set);
 
 // char			**ft_split(char const *s, char *c);
 

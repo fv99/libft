@@ -6,23 +6,11 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:14:43 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/11 22:15:47 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:14:46 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// static int	ft_strlen(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 	{
-// 		i++;
-// 	}
-// 	return (i);
-// }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
