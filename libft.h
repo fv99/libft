@@ -6,7 +6,7 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:29:21 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/15 16:32:28 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:34:08 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,7 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 
 char			*ft_itoa(int n);
+
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
