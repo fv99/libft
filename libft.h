@@ -6,7 +6,7 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:29:21 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/16 17:02:20 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:21:41 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,7 @@ int				ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 
 void			ft_lstadd_back(t_list **lst, t_list *new);
+
+void			ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
