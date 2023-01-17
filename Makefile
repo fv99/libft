@@ -6,7 +6,7 @@
 #    By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 20:44:02 by fvonsovs          #+#    #+#              #
-#    Updated: 2023/01/17 17:53:40 by fvonsovs         ###   ########.fr        #
+#    Updated: 2023/01/17 18:02:38 by fvonsovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,3 +44,7 @@ fclean: clean
 re: fclean all
 
 .PHONY:	all clean fclean re bonus
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
