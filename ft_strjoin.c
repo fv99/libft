@@ -6,21 +6,20 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:35:19 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/17 18:04:37 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:12:22 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char *ft_strcat(char *dest, char *src)
+static char	*ft_strcat(char *dest, char *src)
 {
-	int i;
-	int l;
+	int	i;
+	int	l;
 
 	i = 0;
 	l = ft_strlen(dest);
-
 	while (src[i] != '\0')
 	{
 		dest[i + l] = src[i];
