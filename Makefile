@@ -6,7 +6,7 @@
 #    By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 20:44:02 by fvonsovs          #+#    #+#              #
-#    Updated: 2023/01/16 17:29:34 by fvonsovs         ###   ########.fr        #
+#    Updated: 2023/01/17 13:39:33 by fvonsovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c 
 				ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS		=	${SRCS:.c=.o}
 BONUS		=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-				ft_lstdelone.c
+				ft_lstdelone.c ft_lstclear.c ft_lstiter.c
 BONUS_OBJS	=	$(BONUS:.c=.o)
 LIBC		=	ar -cvq
 RM			=	rm -f
