@@ -6,7 +6,7 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 16:29:00 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/15 20:16:52 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:25:28 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,11 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	sign = n;
-	if (n == -2147483648)
-		return ("-2147483648");
 	str = (char *)malloc(sizeof(char) * (ft_digit_count(n) + 2));
 	if (!str)
 		return (NULL);
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		str[i++] = '0';
 	if (sign < 0)

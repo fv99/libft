@@ -6,7 +6,7 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:25:43 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/13 17:13:35 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:10:04 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		++start;
 	while (s1[end] && ft_strchr(set, s1[end]))
 		--end;
+	if (end < start)
+		return (ft_strdup(""));
 	len = (end - start) + 1;
-	str = malloc((sizeof(char) * len));
+	str = malloc((sizeof(char) * len + 1));
+	if (!str)
+		return (NULL);
 	str = ft_substr(s1, start, len);
-	str[ft_strlen(str)] = '\0';
 	return (str);
 }
