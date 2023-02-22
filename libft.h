@@ -6,7 +6,7 @@
 /*   By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:29:21 by fvonsovs          #+#    #+#             */
-/*   Updated: 2023/01/17 14:54:45 by fvonsovs         ###   ########.fr       */
+/*   Updated: 2023/02/22 18:12:51 by fvonsovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdint.h>
+
+// for get_next_line
+# define BUFFER_SIZE 255
+
+// for printf
+# define HEX_CHARS "0123456789abcdef"
+# define HEX_CHARS_UPPERCASE "0123456789ABCDEF"
 
 typedef struct s_list
 {
@@ -109,5 +118,25 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst,
 						void *(*f)(void *),
 						void (*del)(void *));
+
+char				*get_next_line(int fd);
+
+int					ft_printf(const char *input, ...);
+
+int					print_string(va_list *args);
+
+int					putchar_return(va_list *args);
+
+int					initialize_pointer(va_list *args);
+
+int					print_hex_pointer(const void *ptr, int count);
+
+int					print_hex_lowercase(va_list *args);
+
+int					print_hex_uppercase(va_list *args);
+
+int					print_integer_base10(va_list *args);
+
+int					print_unsigned_base10(va_list *args);
 
 #endif
