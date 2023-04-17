@@ -6,7 +6,7 @@
 #    By: fvonsovs <fvonsovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 20:44:02 by fvonsovs          #+#    #+#              #
-#    Updated: 2023/02/22 18:16:59 by fvonsovs         ###   ########.fr        #
+#    Updated: 2023/04/17 15:22:38 by fvonsovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,14 +25,20 @@ OBJS		=	${SRCS:.c=.o}
 BONUS		=	libft/ft_lstnew.c libft/ft_lstadd_front.c libft/ft_lstsize.c libft/ft_lstlast.c libft/ft_lstadd_back.c \
 				libft/ft_lstdelone.c libft/ft_lstclear.c libft/ft_lstiter.c libft/ft_lstmap.c
 BONUS_OBJS	=	$(BONUS:.c=.o)
-LIBC		=	ar -cvq
+LIBC		=	ar -cq
 RM			=	rm -f
-
+TOTAL_FILES = $(shell echo $(SRCS) | wc -w)
+CURRENT_FILES = 0
 
 all: $(NAME)
 
 $(NAME): ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
+
+%.o: %.c
+	@$(eval CURRENT_FILES=$(shell echo $$(($(CURRENT_FILES)+1))))
+	@echo "Compiling $< [$(CURRENT_FILES)/$(TOTAL_FILES)]"
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: ${OBJS} ${BONUS_OBJS}
 	${LIBC} ${NAME} ${OBJS} ${BONUS_OBJS}
